@@ -9,6 +9,7 @@
   --fs-regular: 1.25rem;
   --fs-logo: 2rem;
   --fs-title: 2.9rem;
+  --fs-banner: 3.2rem;
   /* --fs-regular: 1.2rem;
     --fs-regular: 1.2rem; */
 
@@ -32,10 +33,12 @@ body {
 }
 
 .navbar,
+.banner,
 main,
 footer {
   max-width: 1160px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .flex {
@@ -73,13 +76,28 @@ footer {
   color: #fea301;
 }
 
+.button2 {
+    background-color: #111111;
+    color: white;
+    border: 2px solid #111111;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 10px 60px;
+  }
+  
+  .button2:hover {
+    background-color: white;
+    color: #111111;
+  }
+
 /* Navbar style */
 .header {
   background-color: var(--bg-primary);
 }
 
 .navbar {
-  padding: 20px 0;
+  padding: 20px 0px;
   align-items: center;
   justify-content: space-between;
 }
@@ -91,6 +109,7 @@ a {
 }
 
 .nav-content {
+  padding: 0;
   gap: 32px;
 }
 
@@ -142,6 +161,45 @@ a {
   }
 }
 
+/* Banner styles */
+.banner {
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.img-banner img{
+    height: 575px;
+    width: 470px;
+}
+
+.banner-container {
+    width: 640px;
+}
+.banner-title {
+    color: var(--clr-font-bold);
+    font-size: 52px;
+    font-weight: var(--fw-700);
+    margin-bottom: 24px;
+}
+
+.primary-description {
+    color: var(--clr-font-regular);
+    font-size: var(--fs-regular);
+    font-weight: var(--fw-400);
+    margin-bottom: 24px;
+}
+
+.empowering {
+    color: #fea301;
+}
+
+.vision {
+    color:#01acfd;
+}
+
+
+
+
 /* Responsive design for mobile devices */
 
 @media screen and (max-width: 576px) {
@@ -150,16 +208,64 @@ a {
   .button1 {
     display: none;
   }
+
   .navbar {
     margin: 0;
     padding: 12px 16px;
+    border: 1px solid #fea301;
+  }
+  .banner {
+    flex-direction: column-reverse;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .banner-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+  .img-banner img{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner-title {
+    margin-top: 0;
   }
 }
+/* Responsive design for medium size screen */
 
 @media screen and (min-width: 576px) and (max-width: 996px) {
-  .navbar {
+ 
+    .navbar {
     width: 100%;
     flex-direction: column;
     gap: 10px;
+  }
+
+  .banner {
+    flex-direction: column-reverse;
+  }
+
+  .banner-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+  .img-banner img{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .banner-title {
+    margin-top: 0;
   }
 }
