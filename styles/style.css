@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --bg-primary: rgba(247, 247, 247, 1);
 
   --clr-font-regular: rgba(128, 128, 128, 1);
   --clr-font-bold: rgba(17, 17, 17, 1);
-
 
   --fs-regular: 1.25rem;
   --fs-logo: 2rem;
@@ -340,15 +339,15 @@ a {
 /* Stories section styles */
 
 .stories {
-  background: url(../assets/bg.png), linear-gradient(#FFFFFF , #FEA301 200%);
+  background: url(../assets/bg.png), linear-gradient(#ffffff, #fea301 200%);
 }
 
-.story-card-left{
+.story-card-left {
   margin-left: 140px;
   width: 540px;
   height: 630px;
 }
-.story-1{
+.story-1 {
   background-color: white;
   border-radius: 16px;
 }
@@ -356,7 +355,7 @@ a {
   border-radius: 16px 16px 0 0;
 }
 .date1 {
-  background-color: #3CD8E8;
+  background-color: #3cd8e8;
   height: 47px;
   width: 174px;
   text-align: center;
@@ -379,7 +378,7 @@ a {
   padding: 0 38px;
   margin: 0;
 }
-.story-description{
+.story-description {
   font-family: "Raleway", sans-serif;
   font-size: var(--fs-basic);
   font-weight: var(--fw-500);
@@ -390,7 +389,7 @@ a {
 
 /* story card right */
 
-.story-card-right{
+.story-card-right {
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   margin-right: 140px;
@@ -409,7 +408,7 @@ a {
 }
 
 .date {
-  background-color: #3CD8E8;
+  background-color: #3cd8e8;
   height: 38px;
   width: 179px;
   text-align: center;
@@ -424,8 +423,16 @@ a {
 
   position: relative;
   left: 38px;
-  top: -30px;
+  top: -25px;
 }
+
+.date-bg-olive {
+  background-color: #95B226;
+}
+.date-bg-purple {
+  background-color: #5D58F0;
+}
+
 .story-heading {
   margin: 0;
   padding: 0 38px 28px 38px;
@@ -433,15 +440,13 @@ a {
   font-weight: var(--fw-700);
 }
 
-
-
-
 /* Responsive design for mobile devices */
 
 @media screen and (max-width: 576px) {
   .nav-title,
   .nav-content,
-  .button1 {
+  .button1,
+  .story-card-left {
     display: none;
   }
 
@@ -484,6 +489,39 @@ a {
   .primary-heading {
     margin-top: 40px;
     margin-bottom: 20px;
+  }
+
+  .story-card-right {
+    grid-template-columns: repeat(2, 2fr);
+    width: 100%;
+    margin: 10px;
+    gap: 10px;
+    justify-items: center;
+  }
+
+  .story img {
+    width: 173px;
+    height: 105px;
+  }
+  .story {
+    width: 173px;
+    height: 179px;
+  }
+  .date {
+    height: 22px;
+    width: 103px;
+    font-size: 9.13px;
+    position: relative;
+    left: 22px;
+    top: -16px;
+  }
+  .story-heading {
+    font-size: 9.13px;
+    padding: 0 23px 17px 23px;
+  }
+
+  .stories-container {
+    margin: 20px 0;
   }
 }
 /* Responsive design for medium size screen */
@@ -528,5 +566,16 @@ a {
   .primary-heading {
     margin-top: 40px;
     margin-bottom: 20px;
+  }
+
+  .stories-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .story-card-left,
+  .story-card-right {
+    margin: 0;
   }
 }
