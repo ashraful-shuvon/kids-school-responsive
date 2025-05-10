@@ -10,8 +10,8 @@
   --fs-logo: 2rem;
   --fs-title: 2.9rem;
   --fs-banner: 3.2rem;
-  /* --fs-regular: 1.2rem;
-    --fs-regular: 1.2rem; */
+  --fs-primary: 2.98rem;
+  --fs-sec: 1.5rem;
 
   --fw-400: 400;
   --fw-500: 500;
@@ -77,18 +77,65 @@ footer {
 }
 
 .button2 {
-    background-color: #111111;
-    color: white;
-    border: 2px solid #111111;
+  background-color: #111111;
+  color: white;
+  border: 2px solid #111111;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  padding: 10px 60px;
+}
+
+.button2:hover {
+  background-color: white;
+  color: #111111;
+}
+
+
+.button3 {
+    background-color: white;
+    color: #8700FF;
+    border: 2px solid white;
     border-radius: 12px;
     font-weight: 600;
     font-size: 1.25rem;
-    padding: 10px 60px;
+    padding: 10px 20px;
   }
   
-  .button2:hover {
+  .button3:hover {
+    background-color: #8700FF;
+    color: white;
+  }
+
+  .button4 {
     background-color: white;
-    color: #111111;
+    color: #F0AA00;
+    border: 2px solid white;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 10px 20px;
+  }
+  
+  .button4:hover {
+    background-color: #F0AA00;
+    color: white;
+  }
+
+  
+  .button5 {
+    background-color: white;
+    color: #64C8FF;
+    border: 2px solid white;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 10px 20px;
+  }
+  
+  .button5:hover {
+    background-color: #64C8FF;
+    color: white;
   }
 
 /* Navbar style */
@@ -163,42 +210,97 @@ a {
 
 /* Banner styles */
 .banner {
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
-.img-banner img{
-    height: 575px;
-    width: 470px;
+.img-banner img {
+  height: 575px;
+  width: 470px;
 }
 
 .banner-container {
-    width: 640px;
+  width: 640px;
 }
 .banner-title {
-    color: var(--clr-font-bold);
-    font-size: 52px;
-    font-weight: var(--fw-700);
-    margin-bottom: 24px;
+  color: var(--clr-font-bold);
+  font-size: 52px;
+  font-weight: var(--fw-700);
+  margin-bottom: 24px;
 }
 
 .primary-description {
-    color: var(--clr-font-regular);
-    font-size: var(--fs-regular);
-    font-weight: var(--fw-400);
-    margin-bottom: 24px;
+  color: var(--clr-font-regular);
+  font-size: var(--fs-regular);
+  font-weight: var(--fw-400);
+  margin-bottom: 24px;
 }
 
 .empowering {
-    color: #fea301;
+  color: #fea301;
 }
 
 .vision {
-    color:#01acfd;
+  color: #01acfd;
+}
+/* standard curriculum section style */
+
+.curriculum {
+  background-image: url(../assets/bg.png);
+}
+.primary-heading {
+  color: var(--clr-font-bold);
+  font-size: var(--fs-primary);
+  font-weight: var(--fw-700);
+  text-align: center;
+  margin-top: 60px;
 }
 
+.card-container {
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  gap: 30px;
+}
+.card img {
+  width: 136px;
+  height: 136px;
+}
+.card {
+  /* background: linear-gradient(#DEF5FF, #FFFFFF 40%); */
+  justify-items: center;
+  padding: 50px 38px;
+  border-radius: 19px;
+}
 
+.bg-blue {
+    background: linear-gradient(#DEF5FF, #FFFFFF 40%);
+    border: 2px solid #DEF5FF;
+}
 
+.bg-yellow {
+    background: linear-gradient(#FFF4DC, #FFFFFF 40%);
+    border: 2px solid #FFF4DC;
+}
+.bg-purple {
+    background: linear-gradient(#EEE1FF, #FFFFFF 40%);
+    border: 2px solid #EEE1FF;
+}
+.sec-heading {
+  font-size: var(--fs-sec);
+  font-weight: var(--fw-700);
+  color: var(--clr-font-bold);
+  margin: 0;
+  padding: 32px;
+}
+.sec-description {
+  width: 284px;
+  font-size: var(--fs-regular);
+  font-weight: var(--fw-500);
+  color: var(--clr-font-regular);
+  margin: 0;
+  padding-bottom: 32px;
+}
 
 /* Responsive design for mobile devices */
 
@@ -225,9 +327,9 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
-
+    margin-bottom: 20px;
   }
-  .img-banner img{
+  .img-banner img {
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -236,12 +338,25 @@ a {
   .banner-title {
     margin-top: 0;
   }
+
+  .card-container {
+    flex-direction: column;
+    margin: 0;
+  }
+  .card {
+    width: 90%;
+    padding: 10px;
+  }
+  .primary-heading {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
 }
 /* Responsive design for medium size screen */
 
 @media screen and (min-width: 576px) and (max-width: 996px) {
- 
-    .navbar {
+  .navbar {
     width: 100%;
     flex-direction: column;
     gap: 10px;
@@ -256,9 +371,9 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
-
+    margin-bottom: 20px;
   }
-  .img-banner img{
+  .img-banner img {
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -267,5 +382,19 @@ a {
 
   .banner-title {
     margin-top: 0;
+  }
+
+
+  .card-container {
+    flex-direction: column;
+    padding: 20px;
+    margin: 0;
+  }
+  .card {
+    width: 90%;
+  }
+  .primary-heading {
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 }
